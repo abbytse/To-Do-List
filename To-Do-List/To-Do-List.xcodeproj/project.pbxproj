@@ -14,6 +14,8 @@
 		3CB773EA2482092C00FD0C6D /* To_Do_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CB773E82482092C00FD0C6D /* To_Do_List.xcdatamodeld */; };
 		3CB773EC2482093800FD0C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB773EB2482093800FD0C6D /* Assets.xcassets */; };
 		3CB773EF2482093800FD0C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB773ED2482093800FD0C6D /* LaunchScreen.storyboard */; };
+		3CE97193248215F4002A4FA3 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE97192248215F4002A4FA3 /* TaskViewController.swift */; };
+		3CE971952482160E002A4FA3 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE971942482160E002A4FA3 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3CB773EB2482093800FD0C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CB773EE2482093800FD0C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CB773F02482093800FD0C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE97192248215F4002A4FA3 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		3CE971942482160E002A4FA3 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3CB773ED2482093800FD0C6D /* LaunchScreen.storyboard */,
 				3CB773F02482093800FD0C6D /* Info.plist */,
 				3CB773E82482092C00FD0C6D /* To_Do_List.xcdatamodeld */,
+				3CE97192248215F4002A4FA3 /* TaskViewController.swift */,
+				3CE971942482160E002A4FA3 /* EntryViewController.swift */,
 			);
 			path = "To-Do-List";
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 				3CB773E02482092C00FD0C6D /* AppDelegate.swift in Sources */,
 				3CB773E22482092C00FD0C6D /* SceneDelegate.swift in Sources */,
 				3CB773EA2482092C00FD0C6D /* To_Do_List.xcdatamodeld in Sources */,
+				3CE97193248215F4002A4FA3 /* TaskViewController.swift in Sources */,
+				3CE971952482160E002A4FA3 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
