@@ -8,18 +8,42 @@
 
 import UIKit
 
+/*
+protocol  AddTask {
+    func addTask(name:String)
+}
+*/
+
 class EntryViewController: UIViewController,UITextFieldDelegate{
     
     @IBOutlet var field:UITextField!
     
-    var update: (() -> Void)?
+    //var update: (() -> Void)?
+    
+    /*
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        if(field.text != ""){
+            delegate?.addTask(name: (field?.text!)!)
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    */
+    
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        if(field.text != ""){
+            tasks.append(field.text!)
+            field.text = ""
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    //var delegate: AddTask?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        field.delegate = self
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
     }
+    
+    /*
     
     func tableView(_ tableView: UITableView, shouldSpringLoadRowAt indexPath: IndexPath, with context: UISpringLoadedInteractionContext) -> Bool {
         saveTask()
@@ -44,4 +68,6 @@ class EntryViewController: UIViewController,UITextFieldDelegate{
         
         navigationController?.popViewController(animated: true)
     }
+     */
+    
 }

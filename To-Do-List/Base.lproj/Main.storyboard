@@ -49,14 +49,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-v6-Jyj">
-                                <rect key="frame" x="20" y="123" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-v6-Jyj">
+                                <rect key="frame" x="20" y="110" width="374" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="sop-MN-YJV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn8-ig-tPy">
-                                <rect key="frame" x="167" y="205" width="80" height="54"/>
+                                <rect key="frame" x="167" y="206" width="80" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -65,6 +67,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bMT-v6-Jyj" firstAttribute="top" secondItem="DOR-sV-uCL" secondAttribute="top" id="fgH-AK-8Zu"/>
+                            <constraint firstItem="bMT-v6-Jyj" firstAttribute="leading" secondItem="DOR-sV-uCL" secondAttribute="leading" id="pZi-Ns-zAM"/>
+                            <constraint firstItem="DOR-sV-uCL" firstAttribute="trailing" secondItem="bMT-v6-Jyj" secondAttribute="trailing" id="zYV-GK-osa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DOR-sV-uCL"/>
                     </view>
                     <toolbarItems/>
