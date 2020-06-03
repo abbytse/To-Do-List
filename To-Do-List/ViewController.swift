@@ -23,12 +23,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "cell")
 
         cell.textLabel?.text=models[indexPath.row].title
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM, dd, YYYY"
+        formatter.dateFormat = "MMM, dd, YYYY h:mm a"
         
         cell.detailTextLabel?.text = formatter.string(from: models[indexPath.row].date)
             
