@@ -5,10 +5,8 @@
 //  Created by Abby Tse on 5/30/20.
 //  Copyright © 2020 Abby Tse. All rights reserved.
 //
-
+import UserNotifications
 import UIKit
-
-//public var completion: ((String,Date) -> Void)?
 
 class EntryViewController: UIViewController,UITextFieldDelegate{
     
@@ -22,7 +20,7 @@ class EntryViewController: UIViewController,UITextFieldDelegate{
             
             //_completion?(field.text!, datePicker.date)
             
-            let new = MyReminder(title: field.text!, date: datePicker.date, identifier: "id_\(title)")
+            let new = MyReminder(title: field.text!, date: datePicker.date, identifier: "id_\(String(describing: title))")
             models.append(new)
                     
             let content = UNMutableNotificationContent()
@@ -40,7 +38,7 @@ class EntryViewController: UIViewController,UITextFieldDelegate{
                     
             UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                 if error != nil{
-                    print("something went wrong")
+                    print("Something went wrong!")
                 }
             })
         }

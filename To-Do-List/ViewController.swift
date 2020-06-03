@@ -8,7 +8,6 @@
 import UserNotifications
 import UIKit
 
-var tasks = [String]()
 var models = [MyReminder]()
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
@@ -24,9 +23,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
         
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-            
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "cell")
+
         cell.textLabel?.text=models[indexPath.row].title
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM, dd, YYYY"
+        
+        cell.detailTextLabel?.text = formatter.string(from: models[indexPath.row].date)
             
         return (cell)
     }
@@ -64,10 +68,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Error occurred")
             }
         })
-        
         navigationController?.pushViewController(vc, animated: true)
     }
-
 }
 
 struct MyReminder{
