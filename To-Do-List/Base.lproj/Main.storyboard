@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn8-ig-tPy">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn8-ig-tPy">
                                 <rect key="frame" x="0.0" y="189" width="414" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
@@ -47,7 +47,7 @@
                                     <action selector="addItem:" destination="hu0-Ak-NXj" eventType="touchDown" id="LgO-6q-3aV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-v6-Jyj">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMT-v6-Jyj">
                                 <rect key="frame" x="0.0" y="94" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="sop-MN-YJV"/>
@@ -55,14 +55,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="02Y-O9-kAu">
+                                <rect key="frame" x="0.0" y="378" width="414" height="352"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="02Y-O9-kAu" firstAttribute="leading" secondItem="DOR-sV-uCL" secondAttribute="leading" constant="10" id="0lj-tm-mGg"/>
                             <constraint firstItem="Kn8-ig-tPy" firstAttribute="leading" secondItem="DOR-sV-uCL" secondAttribute="leading" id="Bta-Tk-1qP"/>
+                            <constraint firstItem="02Y-O9-kAu" firstAttribute="trailing" secondItem="DOR-sV-uCL" secondAttribute="trailing" constant="10" id="EEo-LN-tv1"/>
+                            <constraint firstItem="DOR-sV-uCL" firstAttribute="bottom" secondItem="02Y-O9-kAu" secondAttribute="bottom" constant="10" id="Xkr-G7-lH4"/>
                             <constraint firstItem="DOR-sV-uCL" firstAttribute="trailing" secondItem="Kn8-ig-tPy" secondAttribute="trailing" id="acH-Ly-1PM"/>
                             <constraint firstItem="bMT-v6-Jyj" firstAttribute="top" secondItem="DOR-sV-uCL" secondAttribute="top" id="fgH-AK-8Zu"/>
                             <constraint firstItem="bMT-v6-Jyj" firstAttribute="leading" secondItem="DOR-sV-uCL" secondAttribute="leading" id="pZi-Ns-zAM"/>
                             <constraint firstItem="Kn8-ig-tPy" firstAttribute="top" secondItem="bMT-v6-Jyj" secondAttribute="bottom" id="vuw-Oh-wnk"/>
+                            <constraint firstItem="02Y-O9-kAu" firstAttribute="top" secondItem="Kn8-ig-tPy" secondAttribute="bottom" constant="10" id="xU8-PM-PuH"/>
                             <constraint firstItem="DOR-sV-uCL" firstAttribute="trailing" secondItem="bMT-v6-Jyj" secondAttribute="trailing" id="zYV-GK-osa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DOR-sV-uCL"/>
@@ -70,6 +77,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePicker" destination="02Y-O9-kAu" id="bMy-cj-5Nw"/>
                         <outlet property="field" destination="bMT-v6-Jyj" id="sWm-TV-uqZ"/>
                     </connections>
                 </viewController>
