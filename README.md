@@ -1,6 +1,6 @@
 # To-Do-List
 
-Simple iOS application for To Do List 
+Simple iOS application for To Do List \n 
 <img src="Images/appIcon.png">
 
 Functionality includes: 
